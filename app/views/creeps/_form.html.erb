@@ -1,0 +1,11 @@
+<div class="row">
+  <%= form_tag creeps_path, method: :post do %>
+    <div class="col">
+      <%= email_field_tag :email, nil, placeholer: 'Enter an email...' %>
+    </div>
+
+    <div class="col">
+      <%= submit_tag 'Creep', class: 'btn btn-primary btn-block btn-large btn-danger' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,34 @@
+<%- if @error -%>
+  <div>
+    <h3><%= @error %></h3>
+  </div>
+<%- else -%>
+  <div class="demo-type-example">
+    <h1><%= @name %></h1>
+
+    <%- if @websites.any? -%>
+      <ul>
+        <%- @websites.each do |website| -%>
+          <li>
+            <p class="lead"><%= link_to website, website %></p>
+          </li>
+        <%- end -%>
+      </ul>
+    <%- end -%>
+
+    <%- if @image_urls.any? -%>
+      <ul>
+        <% @image_urls.each do |image_url| %>
+          <li>
+            <%= image_tag image_url, class: 'img-rounded img-responsive' %>
+          </li>
+        <% end %>
+      </ul>
+    <%- end -%>
+  </div>
+<%- end -%>
+
+<hr>
+
+<h2>Want more creep?</h2>
+<%= render 'form' %>

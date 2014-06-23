@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: lawson
+  password:
+
+development:
+  <<: *default
+  database: creepr_development
+
+test:
+  <<: *default
+  database: creepr_test
+
+production:
+  <<: *default
+  database: creepr_production
